@@ -1,12 +1,17 @@
+from langchain.llms import Ollama
+from langchain.callbacks.manager import CallbackManager
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+
 if __name__ == "__main__":
-    import os
 
-    os.system("ollama run llama2:13b")
+    llm = Ollama(model="llama2",
+                 callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]))
 
-    prompt = input("Prompt: ")
+    print("🦙 Welcome to the Llama chatbot! 🦙")
 
-    while prompt != "/exit":
-        os.system(prompt)
-        prompt = input("Prompt: ")
+    prompt = input("\nQ: ")
 
-    print("Goodbye!")
+    while prompt != "/bye":
+        output = llm(prompt)
+        print(output)
+        prompt = input("\nQ: ")
