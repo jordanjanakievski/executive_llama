@@ -1,1 +1,4 @@
 langchain
+pyaudio
+pyttsx3
+speechrecognition

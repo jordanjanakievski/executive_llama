@@ -17,18 +17,46 @@ It can be interacted with via text or voice
 
 - Python 3.8+
 - Llama 2 via [Ollama](https://ollama.ai/)
+- [PyAudio](https://pypi.org/project/PyAudio/)
+- [SpeechRecognition](https://pypi.org/project/SpeechRecognition/)
+- [PyTTSx3](https://pypi.org/project/pyttsx3/)
 
 ### Setup
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/jordanjanakievski/executive_llama.git
 ```
+
 2. Install the requirements
+
 ```bash
 pip3 install -r requirements.txt
 ```
-3. Run the program
+
+3. Be sure Ollama is running in the background
+
+```bash
+ollama run llama2:13b
+```
+
+4. Run the program
+
 ```bash
 python3 main.py
 ```
+
+## Commands
+
+### Text
+
+- `/help` - Displays the help message
+- `/bye` - Exits the program
+
+### Keywords
+
+- `write` - Stores the output of the model in a text file
+    - `email` - Stores the file in `docs/emails/`
+    - `prepare` - Stores the file in `docs/prep/`
+    - `research` - Stores the file in `docs/research/`
