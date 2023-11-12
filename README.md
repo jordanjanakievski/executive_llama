@@ -7,19 +7,20 @@
 
 ## About
 
-Executive Llama is a basic chat bot that is built upon Llama 2 utilizing Ollama
+Executive Llama is a basic chatbot that is built upon Llama 2 utilizing Ollama
 
-It can be interacted with via text or voice
+It can be interacted with via text or voice fully offline
 
 ## Installation
 
 ### Requirements
 
 - Python 3.8+
-- Llama 2 via [Ollama](https://ollama.ai/)
+- Llama 2:13B via [Ollama](https://ollama.ai/)
+- [LangChain](https://pypi.org/project/langchain/)
 - [PyAudio](https://pypi.org/project/PyAudio/)
-- [SpeechRecognition](https://pypi.org/project/SpeechRecognition/)
 - [PyTTSx3](https://pypi.org/project/pyttsx3/)
+- [Vosk](https://pypi.org/project/vosk/)
 
 ### Setup
 

@@ -9,7 +9,7 @@ from utils.prompt_utils import prompt_helper, help_output, greeting
 if __name__ == "__main__":
 
     # Set up Llama model
-    llm = Ollama(model="llama2",
+    llm = Ollama(model="llama2:13b",
                  callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]))
 
     # Set up text-to-speech engine
